@@ -29,8 +29,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .desktopBackgroundTechnology {
   background-image: url("./assets/technology/background-technology-desktop.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tabletBackgroundHome {
+  background-image: url("./assets/home/background-home-tablet.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;

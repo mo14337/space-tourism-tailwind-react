@@ -18,10 +18,10 @@ export const Destination = () => {
       <Navbar />
       <section className='lg:max-w-[1280px] z-10 w-full min-h-[calc(100vh-150px)] h-full'>
         <h1 className='w-fit my-6 md:my-10 lg:my-0 lg:mt-16 font-Barlow text-base md:text-xl lg:text-2xl mx-auto md:mx-0 md:ml-10 lg:ml-0 text-[28px] tracking-[4.725px] leading-[34px] text-white'><span className='text-white/40 mr-3 font-extrabold'>01</span> PICK YOUR DESTINATION</h1>
-        <section className=' grid grid-cols-2 place-content-center place-items-center'>
-          <img className='w-[445px] h-[445px] mt-16' src={destinationIndex === 0 ? (Moon) : destinationIndex === 1 ? (Mars) : destinationIndex === 2 ? (Europa) : (Titan)} />
+        <section className=' grid lg:grid-cols-2 grid-row-2 place-content-center place-items-center'>
+          <img className=' w-[300px] h-[300px] mt-8  lg:w-[445px] lg:h-[445px] lg:mt-16' src={destinationIndex === 0 ? (Moon) : destinationIndex === 1 ? (Mars) : destinationIndex === 2 ? (Europa) : (Titan)} />
 
-          <div className=' flex flex-col items-start w-[445px] gap-9'>
+          <div className=' lg:order-2 flex flex-col justify-center items-center lg:items-start w-[445px] gap-9'>
             <nav className=' flex mt-12 gap-9 items-start text-white'>
               <Link onClick={() => setDestinationIndex(0)} className={` ${destinationIndex === 0 ? " text-white border-white" : " hover:border-white/25"} border-b-2 border-transparent text-base tracking-[2.7px] font-Barlow font-thin`} >Moon</Link>
               <Link onClick={() => setDestinationIndex(1)} className={` ${destinationIndex === 1 ? " text-white border-white" : " hover:border-white/25"} border-b-2 border-transparent text-base tracking-[2.7px] font-Barlow  font-thin`} >Mars</Link>
@@ -29,19 +29,19 @@ export const Destination = () => {
               <Link onClick={() => setDestinationIndex(3)} className={` ${destinationIndex === 3 ? " text-white border-white" : " hover:border-white/25"} border-b-2 border-transparent text-base tracking-[2.7px] font-Barlow  font-thin`} >Titan</Link>
             </nav>
             <div className='flex flex-col gap-9'>
-              <div>
+              <div className=' flex flex-col items-center lg:items-start'>
                 <h1 className=' text-[100px] text-white'>{data[destinationIndex].name}</h1>
-                <p className=' text-lg text-white'>{data[destinationIndex].description}</p>
+                <p className=' text-lg text-white lg:text-justify text-center'>{data[destinationIndex].description}</p>
 
               </div>
               <div className=' h-[1px] w-full bg-slate-500 '></div>
               <div className=' flex w-full '>
-                <div className=' flex flex-col w-1/2'>
+                <div className=' flex flex-col items-center lg:items-start w-1/2'>
                   <p className=' text-sm tracking-[2.35px] text-white'>AVG. DISTANCE</p>
                   <p className=' text-[28px] text-white'>{data[destinationIndex].distance}</p>
                 </div>
 
-                <div className='flex flex-col w-1/2'>
+                <div className='flex flex-col items-center lg:items-start w-1/2'>
                   <p className=' text-sm tracking-[2.35px] text-white'>EST. TRAVEL TIME</p>
                   <p className=' text-[28px] text-white'>{data[destinationIndex].travel}</p>
                 </div>
